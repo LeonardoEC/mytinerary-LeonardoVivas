@@ -47,28 +47,31 @@ const Carousel = () => {
   };
 
   return (
+    <div>
+      <h2 className="tituloCarousel">Popular Mytineraries</h2>
+      <div className="containerMain">
 
+        <button className="botRuleta" onClick={previo}>{"<"}</button>
 
-    <div className="containerMain">
+        <div className="contCards">
 
-      <button className="botRuleta" onClick={previo}>{"<"}</button>
+          {ciudad.slice(indiceCiudad, indiceCiudad + mostrar.mostrarCarta).map((item) => (
+            <div key={item.id}
+              className="cardRuleta"
+              style={{ backgroundImage: `url(${item.imageUrl})` }}
+            >
+              <h3>{item.title}</h3>
+              <p>{item.locacizacion}</p>
+              <button className="cardButton">More info</button>
+            </div>
+          ))}
 
-      <div className="contCards">
-
-        {ciudad.slice(indiceCiudad, indiceCiudad + mostrar.mostrarCarta).map((item) => (
-          <div key={item.id}
-            className="cardRuleta"
-            style={{ backgroundImage: `url(${item.imageUrl})` }}
-          >
-            <h3>{item.title}</h3>
-            <p>{item.locacizacion}</p>
-            <button className="cardButton">More info</button>
-          </div>
-        ))}
-
+        </div>
+        <button className="botRuleta" onClick={siguiente}>{">"}</button>
       </div>
-      <button className="botRuleta" onClick={siguiente}>{">"}</button>
     </div>
+
+
 
   );
 
