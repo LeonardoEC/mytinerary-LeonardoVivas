@@ -1,0 +1,19 @@
+.contHero{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titleMain{
+    font-size: 2.5rem;
+}
+.descMain{
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 25px;
+}
+
+.textMain{
+    color: grey;
+    font-size: 1.2rem;
+}

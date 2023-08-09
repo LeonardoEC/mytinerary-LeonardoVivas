@@ -34,13 +34,13 @@ const Carousel = () => {
     return () => clearInterval(interval);
   }, [ciudad.length, mostrar.mostrarCarta]);
 
-  const handleNext = () => {
+  const siguiente = () => {
     setIndiceCiudad((prev) =>
       prev === ciudad.length - mostrar.mostrarCarta ? 0 : prev + 1
     );
   };
 
-  const handlePrev = () => {
+  const previo = () => {
     setIndiceCiudad((prev) =>
       prev === 0 ? ciudad.length - mostrar.mostrarCarta : prev - 1
     );
@@ -51,7 +51,7 @@ const Carousel = () => {
 
     <div className="containerMain">
 
-      <button className="botRuleta" onClick={handlePrev}>{"<"}</button>
+      <button className="botRuleta" onClick={previo}>{"<"}</button>
 
       <div className="contCards">
 
@@ -67,7 +67,7 @@ const Carousel = () => {
         ))}
 
       </div>
-      <button className="botRuleta" onClick={handleNext}>{">"}</button>
+      <button className="botRuleta" onClick={siguiente}>{">"}</button>
     </div>
 
   );
