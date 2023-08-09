@@ -1,0 +1,94 @@
+
+.contCities {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-area {
+    z-index: -1;
+    margin-top: -15vh;
+    width: 100%;
+    height: 54vh;
+    background-color: rgba(71, 70, 67, 0.776);
+    background-image: url(icon-mount.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-area-title {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-size: 2.4rem;
+    top: 6rem;
+    right: 1rem;
+    height: 9rem;
+    width: 15rem;
+    color: white;
+    margin-bottom: 0.2rem;
+}
+
+.top-area-text {
+    font-size: 1.5rem;
+    position: relative;
+    top: 0.5rem;
+    width: 25%;
+    color: white;
+    font-weight: 600;
+}
+
+.bot-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchbar {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.searchbar-img {
+    position: relative;
+    left: 35px;
+}
+
+.searchbar-inp {
+    display: flex;
+    width: 40rem;
+    padding: 1rem 3rem;
+    align-items: center;
+}
+
+
+
+
+
+@media screen and (max-width: 540px) and (min-width: 180px){
+    .top-area {
+        z-index: -1;
+        margin-top: -55vh;
+        height: 155vh;
+    }
+    .top-area-title {
+        top: 12rem;
+    }
+    .top-area-text {
+        font-size: 1.5rem;
+        position: relative;
+        top: 7rem;
+        color: white;
+        font-weight: 600;
+        width: 55%;
+    }
+    .searchbar {
+        margin: 5% 2%;
+        display: flex;
+        justify-content: center;
+    }
+
+}

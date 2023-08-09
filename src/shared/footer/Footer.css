@@ -1,0 +1,46 @@
+.contFooter{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 5%;
+}
+.contIzquierda{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.tituloFooter{
+    position: relative;
+
+}
+
+.img-footer{
+    width: 50px;
+    position: relative;
+    left: 0.5rem;
+    top: 0.5rem
+}
+
+.contDerecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuFooter{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(195, 195, 195);
+    font-weight: bold;
+}
+
+.menuFooter:hover{
+    transition: 1s;
+    color: rgb(13, 13, 13);
+    font-weight: bold;
+}
+

@@ -1,0 +1,39 @@
+.cont-g-login{
+    padding: 10% 13%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(bg-isla.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-login{
+    padding: 3%;
+    background-color: white;
+    width: 30rem;
+    height: 50vh;
+}
+
+/* -------------------------------------------- */
+
+.loginDeco{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+}
+
+.primeraLinea{
+    width: 30%;
+}
+
+.circulo{
+    width: 2.5%;
+    height: 20%;
+    border: 1px solid rgb(87, 87, 87);
+    border-radius: 50%;
+}
+
+/* -------------------------------------------- */
