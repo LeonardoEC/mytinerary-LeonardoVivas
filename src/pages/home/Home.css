@@ -1,13 +1,10 @@
-
-
-.contMain{
-    margin: 3% 0%;
+.contMain {
     display: flex;
-    padding: 10% 1%;
+    padding: 5% 1%;
     justify-content: space-around;
 }
 
-.contIzq{
+.contIzq {
     gap: 3rem;
     width: 40%;
     display: flex;
@@ -16,7 +13,7 @@
 }
 
 
-.buttMain{
+.buttMain {
     text-align: center;
     width: 15rem;
     color: white;
@@ -27,7 +24,14 @@
     text-decoration: none;
 }
 
-.contDer{
+.buttMain:hover {
+    transition: 1s;
+    -webkit-box-shadow: inset 10px 10px 61px 1px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: inset 10px 10px 61px 1px rgba(0, 0, 0, 0.41);
+    box-shadow: inset 10px 10px 61px 1px rgba(0, 0, 0, 0.41);
+}
+
+.contDer {
     display: flex;
     justify-content: end;
     align-items: center;
@@ -37,8 +41,8 @@
 
 /* --------------------------------------------------------------- */
 
-@media screen and (max-width: 540px) and (min-width: 180px){
-    .contMain{
+@media screen and (max-width: 540px) and (min-width: 180px) {
+    .contMain {
         flex-direction: column-reverse;
         margin: auto;
         margin: 0% 15%;
@@ -46,35 +50,36 @@
         gap: 2rem;
     }
 
-    .contIzq{
+    .contIzq {
         width: 100%;
         gap: 2rem;
     }
 
-    .contDer{
+    .contDer {
         margin-top: 30%;
         justify-content: center;
     }
 
-    .titleMain{
+    .titleMain {
         text-align: center;
     }
 
-    .textMain{
+    .textMain {
         text-align: center;
     }
 
-    .buttMain{
+    .buttMain {
         align-self: center;
     }
 }
 
-@media screen and (max-width: 1024px) and (min-width: 760px){
-    .contIzq{
+@media screen and (max-width: 1024px) and (min-width: 760px) {
+    .contIzq {
         height: 25rem;
         width: 80rem;
     }
-    .contDer{
+
+    .contDer {
         width: 20rem;
         justify-content: end;
         align-items: center;

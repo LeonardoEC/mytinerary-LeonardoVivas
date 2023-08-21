@@ -10,7 +10,7 @@
     width: 100%;
     height: 54vh;
     background-color: rgba(71, 70, 67, 0.776);
-    background-image: url(icon-mount.png);
+    background-image: url('../../../public/icon-mount.png');
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -47,7 +47,7 @@
 }
 
 .searchbar {
-    margin-top: 2%;
+    margin: 2% auto;
     display: flex;
     justify-content: center;
 }
@@ -64,6 +64,15 @@
     align-items: center;
 }
 
+.contCard{
+    padding: 1%;
+    margin: 1%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
 
 

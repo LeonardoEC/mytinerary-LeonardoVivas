@@ -1,4 +1,5 @@
 import '../footer/Footer.css'
+import { Link as LinkRouter } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -8,8 +9,21 @@ const Footer = () => {
                 <h3 className='tituloFooter'>My Tinerary</h3>
             </div>
             <div className='contDerecha'>
-                <a className='menuFooter' href="">Home</a>
-                <a className='menuFooter' href="">Cities</a>
+                <div className='contDerechaContenido'>
+                    <h3>Explore</h3>
+                    <LinkRouter className='menuFooter' to="">Home</LinkRouter>
+                    <LinkRouter className='menuFooter' to="">Cities</LinkRouter>
+                </div>
+                <div className='contDerechaContenido'>
+                    <h3>About</h3>
+                    <a className='menuFooter' href="">Facebook</a>
+                    <a className='menuFooter' href="">Instagram</a>
+                </div>
+                <div className='contDerechaContenido'>
+                    <h3>Developer</h3>
+                    <a className='menuFooter' href="">Github</a>
+                    <a className='menuFooter' href="">Linkedin</a>
+                </div>
             </div>
         </footer>
     )

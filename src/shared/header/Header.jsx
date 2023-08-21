@@ -20,13 +20,13 @@ const Header = () => {
     return (
         <header className='contHeader'>
             <div className='logo'>
-                <h1>My Tinerary</h1>
+                <LinkRouter className="logoLink"><h1>My Tinerary</h1></LinkRouter>
             </div>
             <nav className='contNav'>
 
                 {
                     show
-                        ? LINKS.map((links) => (<LinkRouter className="navButt" to={links.to}> {links.title} </LinkRouter>))
+                        ? LINKS.map((links) => (<LinkRouter key={links.title} className="navButt" to={links.to}> {links.title} </LinkRouter>))
                         : null
                 }
 

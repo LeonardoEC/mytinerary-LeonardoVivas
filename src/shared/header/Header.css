@@ -1,5 +1,4 @@
-
-.contHeader{
+.contHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,11 +7,22 @@
 
 }
 
-.logo{
+.logo {
     font-family: 'REM', sans-serif;
 }
 
-.contNav{
+.logoLink {
+    color: black;
+    text-decoration: none;
+}
+
+.logoLink:hover {
+    transition: 1s;
+    color: #4F46E5;
+    text-decoration: none;
+}
+
+.contNav {
     width: 50%;
     display: flex;
     align-items: center;
@@ -22,26 +32,26 @@
     font-family: 'REM', sans-serif;
 }
 
-.navButt{
+.navButt {
     padding: 1rem 0rem;
     margin: 2%;
     text-decoration: none;
     color: black;
 }
 
-.navButt:hover{
+.navButt:hover {
     transition: 1s;
     color: #4F46E5;
 }
 
-.showMenu{
+.showMenu {
     padding: 0.5rem 1.5rem;
     border-radius: 15px;
     margin: 0% 2%;
     border: none;
 }
 
-.showMenu:hover{
+.showMenu:hover {
     transition: 1s;
     border-color: #4F46E5;
     cursor: pointer;
@@ -49,7 +59,7 @@
     color: black;
 }
 
-.login{
+.login {
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -61,10 +71,19 @@
     cursor: pointer;
 }
 
+.login:hover {
+    transition: 1s;
+    -webkit-box-shadow: inset 10px 10px 61px 1px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: inset 10px 10px 61px 1px rgba(0, 0, 0, 0.41);
+    box-shadow: inset 10px 10px 61px 1px rgba(0, 0, 0, 0.41);
+    background-color: #4F46E5;
+    cursor: pointer;
+}
+
 /* --------------------------------------------------------------- */
 
 
-@media screen and (max-width: 540px) and (min-width: 180px){
+@media screen and (max-width: 540px) and (min-width: 180px) {
     .contHeader {
         display: flex;
         flex-direction: column;
@@ -73,11 +92,13 @@
         gap: 10px;
         margin-bottom: 2%;
     }
-    .contNav{
+
+    .contNav {
         flex-direction: column;
         gap: 10px;
     }
-    .logo{
+
+    .logo {
         text-align: center;
         font-family: 'REM', sans-serif;
         font-family: 1rem;
@@ -85,8 +106,8 @@
     }
 }
 
-@media screen and (max-width: 912px) and (min-width: 180px){
-    .contNav{
+@media screen and (max-width: 912px) and (min-width: 180px) {
+    .contNav {
         width: 70%;
     }
 }

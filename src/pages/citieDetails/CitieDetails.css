@@ -1,0 +1,82 @@
+.contDC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    -webkit-box-shadow: inset 10px 10px 89px 26px rgba(0,0,0,0.44);
+    -moz-box-shadow: inset 10px 10px 89px 26px rgba(0,0,0,0.44);
+    box-shadow: inset 10px 10px 89px 26px rgba(0,0,0,0.44);
+}
+
+.contTop {
+    border: 2px solid grey;
+    background-color: rgba(190, 190, 190, 0.498);
+    border-radius: 15px;
+    padding: 2%;
+    margin: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 500;
+}
+
+.contInf{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titleInf{
+    text-align: center;
+    font-size: 4rem;
+}
+
+.contInf > p {
+    font-size: 1.2rem;
+}
+
+.btnCitie{
+    width: 10%;
+    padding: 1%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(119, 136, 153, 0.588);
+    border-radius: 15px;
+}
+
+.btnCitie:hover{
+    transition: 1s;
+    background-color: lightslategray;
+}
+
+.contImg{
+    width: 25%;
+    margin: auto;
+}
+
+.flagImg{
+    width: 30rem;
+    border-radius: 5px;
+}
+
+.contBot{
+    padding: 0.5%;
+    opacity: 0.8;
+    margin: 3%;
+}
+
+.frameMap{
+    border-radius: 5px;
+    border: 2px solid black;
+    -webkit-box-shadow: 3px 3px 37px 11px rgba(0, 0, 0, 0.47);
+    -moz-box-shadow: 3px 3px 37px 11px rgba(0, 0, 0, 0.47);
+    box-shadow: 3px 3px 37px 11px rgba(0, 0, 0, 0.47);
+}
