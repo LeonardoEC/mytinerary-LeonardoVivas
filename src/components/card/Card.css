@@ -32,3 +32,19 @@
 .link {
     text-decoration: none;
 }
+
+@media screen and (max-width: 540px) and (min-width: 180px) {
+    .card{
+        width: 20rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 280px) and (min-width: 180px) {
+    .card{
+        width: 15rem;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -50,3 +50,10 @@
     font-weight: bold;
 }
 
+@media screen and (max-width: 540px) and (min-width: 180px) {
+    .contFooter{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+}

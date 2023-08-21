@@ -48,13 +48,13 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
-    background-color: rgba(119, 136, 153, 0.588);
+    background-color: #4F46E5;
     border-radius: 15px;
 }
 
 .btnCitie:hover{
     transition: 1s;
-    background-color: lightslategray;
+    background-color: #6963e4;
 }
 
 .contImg{
@@ -79,4 +79,71 @@
     -webkit-box-shadow: 3px 3px 37px 11px rgba(0, 0, 0, 0.47);
     -moz-box-shadow: 3px 3px 37px 11px rgba(0, 0, 0, 0.47);
     box-shadow: 3px 3px 37px 11px rgba(0, 0, 0, 0.47);
+}
+
+@media screen and (max-width: 540px) and (min-width: 180px) {
+
+    .contDC {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+
+    .contTop {
+        flex-direction: column;
+        padding: 10% 2%;
+    }
+    
+    .contInf{
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .titleInf{
+        text-align: center;
+        font-size: 4rem;
+    }
+    
+    .contInf > p {
+        font-size: 1.2rem;
+    }
+    
+    .btnCitie{
+        margin: 5% auto;
+        width: 50%;
+        padding: 5%;
+    }
+
+    
+    .contImg{
+        width: 85%;
+        margin: auto;
+    }
+    
+    .flagImg{
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .contBot{
+        padding: 0.5%;
+        opacity: 0.8;
+        margin: 3%;
+    }
+    
+    .frameMap{
+        border-radius: 5px;
+        border: 2px solid black;
+        -webkit-box-shadow: 3px 3px 37px 11px rgba(0, 0, 0, 0.47);
+        -moz-box-shadow: 3px 3px 37px 11px rgba(0, 0, 0, 0.47);
+        box-shadow: 3px 3px 37px 11px rgba(0, 0, 0, 0.47);
+        width: 100%;
+        height: 25rem;
+    }
+}
+
+@media screen and (max-width: 280px) and (min-width: 180px) {
+
 }
