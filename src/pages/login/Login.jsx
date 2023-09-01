@@ -1,6 +1,22 @@
 import '../login/Login.css'
 
+import { user_photo } from '../../store/actions/userActions'
+
+import { useDispatch } from 'react-redux'
+
 const Login = () => {
+
+    const dispatch = useDispatch()
+
+    const handelSingIn = () => {
+        const user = {
+            photo: 'aqui hay una foto'
+        }
+
+        dispatch(user_photo(user))
+
+    }
+
     return (
         <div className='Backgroudn'>
             <div className="cont-g-login">
@@ -21,13 +37,13 @@ const Login = () => {
                     </div>
                     <p>Sign up with email</p>
                     <p>Already have an account?<a href=""> Sign in</a></p>
-                    <form action="">
+                    <div action="">
                         <label htmlFor="">Email</label>
                         <input type="text" />
                         <label htmlFor="">Password</label>
                         <input type="text" />
-                        <button>Continue</button>
-                    </form>
+                        <button onClick={handelSingIn} >Continue</button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@
     height: 20rem;
      /* Fondo */
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     filter: grayscale(90%);
      /* Letra */

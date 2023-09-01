@@ -2,10 +2,13 @@ import { useState } from "react"
 import {Link as LinkRouter} from 'react-router-dom'
 
 import '../header/Header.css'
+import { useSelector } from "react-redux"
 
 const Header = () => {
 
     let [show, setShow] = useState(false)
+    const photo = useSelector(store => store.userReducer.photo)
+    console.log(photo)
 
     const LINKS = [
         { title: 'Home', to: '/' },

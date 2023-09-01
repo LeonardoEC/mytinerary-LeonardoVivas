@@ -1,26 +1,50 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import '../cities/Cities.css'
 import Card from '../../components/card/Card'
 import { Link as LinkRouter } from 'react-router-dom'
-import axios from 'axios'
+import { useDispatch, useSelector } from 'react-redux'
+import { filter_cities, get_cities } from '../../store/actions/citieActions'
+
 
 
 const Cities = () => {
 
-    const [cities, setCities] = useState()
+    // const [cities, setCities] = useState()
+    const cities = useSelector((cities) => cities.citieReducer.cities)
+    console.log(cities)
+    console.log(cities.itineary)
+    const dispatch = useDispatch()
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/cities?name=')
-            .then(response => setCities(response.data.cities))
-            .catch(err => console.log(err))
-    }, [])
+        dispatch(get_cities())
 
-    const inputSearch = async (x)=>{
+
+        // axios.get('http://localhost:8000/api/cities?name=')
+        //     .then(response => setCities(response.data.cities))
+        //     .catch(err => console.log(err))
+    }, [dispatch])
+
+    const inpSearch = useRef()
+    
+
+    const inputSearch = async ()=>{
+
+        // const citie = inpSearch.current.value
+        // console.log(citie)
+
         try {
-            const response = await axios.get(`http://localhost:8000/api/cities?name=${x.target.value}`)
-            setCities(response.data.cities)
+            dispatch(filter_cities({
+                name: inpSearch.current.value
+            }))
+            // const response = await axios.get(`http://localhost:8000/api/cities?name=${citie}`)
+            // setCities(response.data.cities)
         } catch(err){
-            console.log(err)
+            // if(err.response.status === 404){
+            //     console.log('No se encontro la ciudad')
+            //     setCities([])
+            // } else{
+            //     console.log(err)
+            // }
         }
     }
 
@@ -33,18 +57,21 @@ const Cities = () => {
             <div className="bot-area">
                 <div className="searchbar">
                     <img className="searchbar-img" src="Vector.svg" alt="" />
-                    <input onChange={inputSearch} className="searchbar-inp" type="text" placeholder="Search your city" />
+                    <input ref={inpSearch} className="searchbar-inp" type="text" placeholder="Search your city" />
+                    <button onClick={inputSearch}>Enviar</button>
                 </div>
             </div>
             <div className='contCard'>
                 {
-                    cities?.map((item => {
+                    cities?.length > 0
+                    ? cities?.map((item => {
                         return (
                             <LinkRouter className='link' key={item._id} to={`/cities/${item._id}`}>
                                 <Card title={item.name} subtitle={item.country} bgImg={item.img} />
                             </LinkRouter>
                         )
                     }))
+                    : <h1>explota</h1>
                 }
             </div>
         </main>
