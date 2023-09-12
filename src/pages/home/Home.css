@@ -1,15 +1,15 @@
 .contMain {
     display: flex;
-    padding: 5% 1%;
+    padding: 7% 5%;
     justify-content: space-around;
 }
 
 .contIzq {
+    width: 45%;
     gap: 3rem;
-    width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 
@@ -32,10 +32,10 @@
 }
 
 .contDer {
-    display: flex;
-    justify-content: end;
-    align-items: center;
 
+    width: 40%;
+    display: flex;
+    align-items: center;
 }
 
 

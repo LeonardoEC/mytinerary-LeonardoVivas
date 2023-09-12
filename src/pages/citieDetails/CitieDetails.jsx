@@ -28,8 +28,8 @@ const CitieDetails = () => {
 
     useEffect(() => {
 
-        dispatch(get_citiesById({id:id}))
-        dispatch(get_itinerary({id:id}))
+        dispatch(get_citiesById({ id: id }))
+        dispatch(get_itinerary({ id: id }))
 
         // axios.get(`http://localhost:8000/api/cities/${id}`)
         //     .then(response => {
@@ -47,7 +47,7 @@ const CitieDetails = () => {
         //     })
         //     .catch(err => console.log(err));
 
-    }, [dispatch,id])
+    }, [dispatch, id])
 
     // console.log(item)
     // console.log(itineary)
@@ -60,38 +60,42 @@ const CitieDetails = () => {
     return (
         <div className="contDC" style={{ backgroundImage: `url(${item.img})` }}>
             <div className="contTop">
-                <section className="contInf">
+                <div>
                     <h2 className="titleInf">{item.name}</h2>
-                    <p>Country: {item.country}</p>
-                    <p>Currency: {item.currency}</p>
-                    <p>{item.description}</p>
-                    <LinkRouter className="btnCitie" to={'/cities'}>Cities</LinkRouter>
-                </section>
-                <figure className="contImg">
-                    <img className="flagImg" src={item.flag} alt="bandera" />
-                </figure>
+                </div>
+                <div className="mainInfo">
+                    <section className="contInf">
+                        <p>Country: {item.country}</p>
+                        <p>Currency: {item.currency}</p>
+                        <p>{item.description}</p>
+                        <LinkRouter className="btnCitie" to={'/cities'}>Cities</LinkRouter>
+                    </section>
+                    <figure className="contImg">
+                        <img className="flagImg" src={item.flag} alt="bandera" />
+                    </figure>
+                </div>
             </div>
             <div className="ItineraryDet">
                 {
-                    itemItinerary?.length > 0 
-                    ? itemItinerary?.map((item => {
-                        return (
-                            <Itinerary 
-                            title={item.itineraryName} 
-                            foto={item.user.userImg} 
-                            nombre = {item.user.userName}
-                            apellido = {item.user.userLastName}
-                            description = {item.description}
-                            like = {item.like}
-                            price = {item.price}
-                            duration = {item.duration}
-                            hashtag = {[item.hashtag]}
-                            />
-                        )
-                    }))
-                    : <div className="NoIt">
-                        <h2>Sorry, there are no itineraries for this city yet,<LinkRouter className="linkNotIt" to="/"> sign up </LinkRouter> to get updates on upcoming itineraries for these and many more cities</h2>
-                    </div>
+                    itemItinerary?.length > 0
+                        ? itemItinerary?.map((item => {
+                            return (
+                                <Itinerary
+                                    title={item.itineraryName}
+                                    foto={item.user.userImg}
+                                    nombre={item.user.userName}
+                                    apellido={item.user.userLastName}
+                                    description={item.description}
+                                    like={item.like}
+                                    price={item.price}
+                                    duration={item.duration}
+                                    hashtag={[item.hashtag]}
+                                />
+                            )
+                        }))
+                        : <div className="NoIt">
+                            <h2>Sorry, there are no itineraries for this city yet,<LinkRouter className="linkNotIt" to="/"> sign up </LinkRouter> to get updates on upcoming itineraries for these and many more cities</h2>
+                        </div>
                 }
             </div>
             <div className="contBot">

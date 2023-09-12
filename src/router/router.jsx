@@ -5,8 +5,11 @@ import Main from '../layouts/Main'
 import Home from '../pages/home/Home'
 import Cities from '../pages/cities/Cities'
 import CitieDetails from '../pages/citieDetails/CitieDetails'
-import Login from '../pages/login/Login'
 import Errorpages from '../pages/ErrorPages/Errorpages'
+import SignIn from '../pages/signIn/SignIn'
+import SignUp from '../pages/signUp/SignUp'
+import Login from '../pages/login/Login'
+import ProtectedRoute from './ProtectedRoute'
 
 
 
@@ -17,21 +20,32 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '*',
-                element: <Errorpages/>
+                element: <Errorpages />
             },
             {
                 path: '/',
-                element: <Home/>
+                element: <Home />
             },
             {
                 path: '/cities',
-                element: <Cities/>
-            },{
+                element: <Cities />
+            }, {
                 path: '/cities/:id',
-                element: <CitieDetails/>
-            },{
+                element: <CitieDetails />
+            }, {
+                path: '/signIn',
+                element: (
+                    <ProtectedRoute path={'/'}>
+                        <SignIn />
+                    </ProtectedRoute>)
+            }, {
+                path: '/signUp',
+                element: (<ProtectedRoute path={'/'}>
+                    <SignUp />
+                </ProtectedRoute>)
+            }, {
                 path: '/login',
-                element: <Login/>
+                element: <Login />
             },
         ]
     }
