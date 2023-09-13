@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { user_logout } from "../../store/actions/userActions";
 
 
+
 import '../header/Header.css'
 import { useSelector } from "react-redux"
 
@@ -13,7 +14,7 @@ const Header = () => {
 
     let [show, setShow] = useState(false)
     const user = useSelector(store => store.userReducer.user)
-    console.log("estoy en el header", user)
+
 
     const LINKS = [
         { title: 'Home', to: '/' },
@@ -25,11 +26,13 @@ const Header = () => {
     }
 
     const handleSignOut = () => {
-        console.log("Hola mundo")
+
         dispatch(user_logout())
-        setTimeout(()=>{
+        setTimeout(() => {
+            
             window.location.reload()
         }, 1)
+        
     }
 
 
@@ -58,7 +61,9 @@ const Header = () => {
                         <div onClick={handleSignOut} className="contUser">
                             <p>{user.name}</p>
                             <p> {user.lastname}</p>
-                            <img className="bicho" src={user.img} />
+                            <figure className="contImgUser">
+                                <img className="imgUser" src={user.img} />
+                            </figure>
                         </div>
                 }
             </nav>

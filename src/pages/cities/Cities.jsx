@@ -58,7 +58,7 @@ const Cities = () => {
                 <div className="searchbar">
                     <img className="searchbar-img" src="Vector.svg" alt="" />
                     <input ref={inpSearch} className="searchbar-inp" type="text" placeholder="Search your city" />
-                    <button onClick={inputSearch}>Enviar</button>
+                    <button className='btnsearch' onClick={inputSearch}>Search</button>
                 </div>
             </div>
             <div className='contCard'>

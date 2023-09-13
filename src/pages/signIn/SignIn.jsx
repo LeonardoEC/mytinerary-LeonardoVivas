@@ -3,11 +3,13 @@ import '../signIn/SignIn.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { useState } from 'react'
 import { user_login } from '../../store/actions/userActions'
+import GoogleSignin from '../../components/googlesignin/GoogleSignin'
+import { Link as LinkRouter } from 'react-router-dom'
 
 const SignIn = () => {
 
     const store = useSelector(store => store)
-    console.log("viene del store", store)
+    // console.log("viene del store", store)
 
     const [formData, setFormData] = useState({
         email: '',
@@ -57,15 +59,16 @@ const SignIn = () => {
                             <input type="email" name='email' onChange={handleInput} />
                             <label>Password</label>
                             <input type="password" name='password' onChange={handleInput} />
-                            <a href="">Recover your password</a>
+                            <a href="#">Recover your password</a>
                         </div>
                         <div className='buttSignInForm'>
-                            <button className='btnGeneral btnSignIn'>Sing in</button>
-                            <hr />
+                            <button className='btnGeneral btnSignIn'>SingIn</button>
+                            <hr className='line' />
+                            <GoogleSignin/>
                             {/* <button className='btnGeneral btnSignIn'>Sing by Google</button> */}
 
                         </div>
-                            <p>If you are not yet registered you can do it <a href="">here</a></p>
+                            <p>If you are not yet registered you can do it <LinkRouter to="/signUp">here</LinkRouter></p>
                     </form>
                 </div>
             </div>

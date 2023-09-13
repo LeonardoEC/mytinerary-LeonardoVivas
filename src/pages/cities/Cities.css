@@ -26,7 +26,6 @@
     position: relative;
     font-size: 2.4rem;
     top: 4rem;
-    right: 1rem;
     height: 9rem;
     width: 15rem;
     margin-bottom: 0.2rem;
@@ -38,6 +37,7 @@
     top: -2rem;
     width: 25%;
     font-weight: 600;
+    text-align: center;
 }
 
 .bot-area {
@@ -46,6 +46,7 @@
 }
 
 .searchbar {
+    width: 90%;
     margin: 2% auto;
     display: flex;
     justify-content: center;
@@ -58,9 +59,15 @@
 
 .searchbar-inp {
     display: flex;
-    width: 40rem;
+    width: 70%;
     padding: 1rem 3rem;
     align-items: center;
+}
+
+.btnsearch{
+    padding: 1%;
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid grey;
 }
 
 .contCard{

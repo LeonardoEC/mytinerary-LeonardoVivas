@@ -3,6 +3,7 @@ import '../login/Login.css'
 import { user_photo } from '../../store/actions/userActions'
 
 import { useDispatch } from 'react-redux'
+import GoogleSignin from '../../components/googlesignin/GoogleSignin' 
 
 const Login = () => {
 
@@ -43,6 +44,7 @@ const Login = () => {
                         <label htmlFor="">Password</label>
                         <input type="text" />
                         <button onClick={handelSingIn} >Continue</button>
+
                     </div>
                 </div>
             </div>

@@ -4,6 +4,8 @@ import React, { useRef } from "react";
 import { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { user_sign_up } from '../../store/actions/userActions';
+import GoogleSignin from '../../components/googlesignin/GoogleSignin'
+import { Link as LinkRouter } from 'react-router-dom'
 
 
 const SignUp = () => {
@@ -74,14 +76,14 @@ const SignUp = () => {
                 <div className='titleSignUp'>
                     <h3>SignUp</h3>
                 </div>
-                <div>
+                <div className='contform'>
                     <form onSubmit={handleButtSignUp} className='formSignUp' action="">
                         <label >Name</label>
                         <input type="text" name='userName' onChange={handleSignUp} />
                         <label >LastName</label>
                         <input type="text" name='userLastName' onChange={handleSignUp} />
                         <label >Email</label>
-                        <input type="email" name='email' onChange={handleSignUp} />
+                        <input type="email" name='email' onChange={handleSignUp} required />
                         <label >Country</label>
                         <select defaultValue="" name='country' onChange={handleSignUp}>
                             {paises.map((pais, index) => (
@@ -91,17 +93,17 @@ const SignUp = () => {
                             ))}
                         </select>
                         <label htmlFor="" >Password</label>
-                        <input type="password" onChange={handleSignUp} name='password' />
+                        <input type="password" onChange={handleSignUp} name='password' required />
                         {/* <label htmlFor="" onChange={handleSignUp}>Confirm password</label>
                         <input type="password" name='confirmPassword' /> */}
                         <div className='formButton'>
-                            <button>SignUp</button>
-                            <hr />
-                            <button>Create acoutn by google</button>
+                            <button className='btnSignUp'>SignUp</button>
+                            <hr className='line' />
+                            <GoogleSignin />
                         </div>
                     </form>
                     <div className='formtextSignIn' >
-                        <p>If you already have an account log in <a href="">here</a></p>
+                        <p>If you already have an account log in <LinkRouter to="/signIn">here</LinkRouter></p>
                     </div>
                 </div>
             </div>

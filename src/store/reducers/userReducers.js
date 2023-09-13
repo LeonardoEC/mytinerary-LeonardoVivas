@@ -1,6 +1,6 @@
 import { createReducer } from "@reduxjs/toolkit";
 import {  } from "../actions/userActions";
-import { user_photo, user_login, user_token, user_logout, user_sign_up } from "../actions/userActions";
+import { user_photo, user_login, user_token, user_logout, user_sign_up, user_sign_in_g } from "../actions/userActions";
 
 const initialState = {
     // text: 'un texto',
@@ -42,6 +42,13 @@ const userReducer = createReducer(initialState,
         return{
             ...state,
             user:action.payload
+        }
+    })
+    .addCase(user_sign_in_g.fulfilled, (state, action) => {
+        return {
+            ...state,
+            user: action.payload.user,
+            token: action.payload.token
         }
     })
 )

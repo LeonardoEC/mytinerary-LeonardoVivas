@@ -1,5 +1,5 @@
 .constSignIn {
-    padding: 5.7% 5%;
+    padding: 10% 5%;
     display: flex;
     justify-content: flex-end;
     background-image: url(https://besthqwallpapers.com/Uploads/19-6-2018/56176/boeing-747-400-passenger-plane-sky-flight-airline.jpg);
@@ -9,8 +9,6 @@
     -webkit-box-shadow: inset 0px 0px 54px 0px rgba(0, 0, 0, 0.52);
     -moz-box-shadow: inset 0px 0px 54px 0px rgba(0, 0, 0, 0.52);
     box-shadow: inset 0px 0px 54px 0px rgba(0, 0, 0, 0.52);
-
-
 
     /* & .cardLogoSignIn{
         display: flex;
@@ -34,7 +32,6 @@
         }
 
         & .cardform {
-
             & .cardSignInForm {
                 padding: 9% 0%;
                 display: flex;
@@ -54,18 +51,25 @@
                     font-size: 1.2rem;
                     padding: 1% 0%;
                     margin-bottom: 2%;
+                    
                 }
 
                 & input:focus {
                     transition: 1s;
                     border-bottom: 2px solid rgb(0, 166, 255);
+                    background-color: rgba(255, 255, 255, 0);
                 }
 
                 & a {
-
-                    width: 22%;
+                    color: rgb(194, 194, 194);
+                    font-weight: bold;
+                    width: 50%;
                     text-decoration: none;
+                }
 
+                & a:hover{
+                    transition: 1s;
+                    color: rgb(110, 110, 110);
                 }
             }
 
@@ -74,25 +78,27 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
+                align-items: center;
 
                 & .btnGeneral {
-                    font-size: 1.05rem;
-                    font-weight: bold;
+                    font-size: 1rem;
                     padding: 3%;
                     border: none;
                     border-radius: 15px;
                 }
 
                 & .btnSignIn {
+                    padding: 2% 40%;
+                    border-radius: 15px;
                     border: none;
-                    background-color: rgb(74, 192, 133);
+                    color: white;
+                    background: rgb(79,70,229);
+                    background: linear-gradient(102deg, rgba(79,70,229,1) 0%, rgba(0,101,255,1) 100%);
                 }
 
                 & .btnSignIn:hover {
                     transition: 1s;
-                    background-color: rgb(70, 160, 115);
-                    color: white;
-                    padding: 4.5%;
+                    background: linear-gradient(102deg, rgb(87, 78, 255) 0%, rgb(36, 124, 255) 100%);
                 }
 
                 & .btnSignUp {
@@ -107,7 +113,66 @@
                     padding: 4.5%;
                 }
             }
+
+            .line{
+                width: 100%;
+                border: 0.5px solid rgb(191, 191, 191);
+            }
         }
     }
 
 }
+
+@media screen and (max-width: 1380px) and (min-width: 180px) {
+    .constSignIn {
+        justify-content: center;
+        
+        & .cardSignIn {
+            width: 95%;
+            & .cardform {
+                & .cardSignInForm {
+
+                    & a {
+                        color: rgb(110, 110, 110);
+                        font-weight: bold;
+                        width: 90%;
+                        text-decoration: none;
+                    }
+    
+                    & a:hover{
+                        transition: 1s;
+                        color: rgb(47, 47, 47);
+                    }
+                }
+    
+            }
+        }
+    }
+}
+
+/* @media screen and (max-width: 1380px) and (min-width: 600px) {
+    .constSignIn {
+        justify-content: center;
+        
+        & .cardSignIn {
+            width: 95%;
+            & .cardform {
+                & .cardSignInForm {
+
+                    & a {
+                        color: rgb(110, 110, 110);
+                        font-weight: bold;
+                        width: 90%;
+                        text-decoration: none;
+                    }
+    
+                    & a:hover{
+                        transition: 1s;
+                        color: rgb(47, 47, 47);
+                    }
+                }
+    
+            }
+        }
+    }
+} */
