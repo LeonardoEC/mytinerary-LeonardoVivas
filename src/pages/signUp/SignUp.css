@@ -1,0 +1,115 @@
+.contSignUp {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(https://m.media-amazon.com/images/I/91JIKvv+HOL.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: rgb(0, 0, 0);
+}
+
+
+.cardSignUp {
+    background-color: rgba(153, 153, 153, 0.596);
+    width: 30%;
+    height: auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.titleSignUp {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.contform{
+    width: 80%;
+}
+
+.formSignUp {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.formSignUp input {
+    padding: 2% 0%;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.formSignUp input:focus {
+    transition: 1s;
+    border-bottom: 2px solid rgb(0, 166, 255);
+}
+
+.formSignUp select {
+    margin: 5% 0%;
+    padding: 2% 1%;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+}
+
+.formButton {
+    margin-top: 50px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.btnSignUp {
+    font-size: 1rem;
+    padding: 2% 45%;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    background: rgb(79, 70, 229);
+    background: linear-gradient(102deg, rgba(79, 70, 229, 1) 0%, rgba(0, 101, 255, 1) 100%);
+}
+
+.btnSignUp:hover {
+    transition: 1s;
+    background: linear-gradient(102deg, rgb(87, 78, 255) 0%, rgb(36, 124, 255) 100%);
+}
+
+.formtextSignIn {
+    text-align: center;
+}
+
+.line {
+    width: 100%;
+    border: 0.5px solid rgb(151, 151, 151);
+}
+
+@media screen and (max-width: 1380px) and (min-width: 180px) {
+
+
+    .contform{
+        width: 100%;
+    }
+
+    .cardSignUp {
+        text-align: center;
+        width: 100%;
+        padding: 5%;
+    }
+
+
+    .formSignUp {
+        width: 100%;
+    }
+}

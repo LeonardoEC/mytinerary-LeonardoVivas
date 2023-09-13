@@ -13,10 +13,11 @@ const Home = () => {
           <LinkRouter className='buttMain' to={'/cities'}>View More</LinkRouter>
         </div>
         <figure className="contDer">
-          <img src="icon-mount.png" alt="Logo" />
+          {/* <img src="icon-mount.png" alt="Logo" /> */}
+          <Carousel />
         </figure>
       </main>
-      <Carousel />
+      
     </div>
   )
 }

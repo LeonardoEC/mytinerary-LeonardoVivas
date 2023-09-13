@@ -3,6 +3,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1%;
+    background-color: rgba(180, 180, 180, 0.244);
+    
 }
 .contIzquierda{
     display: flex;

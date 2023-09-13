@@ -3,6 +3,7 @@ import '../login/Login.css'
 import { user_photo } from '../../store/actions/userActions'
 
 import { useDispatch } from 'react-redux'
+import GoogleSignin from '../../components/googlesignin/GoogleSignin' 
 
 const Login = () => {
 
@@ -10,7 +11,7 @@ const Login = () => {
 
     const handelSingIn = () => {
         const user = {
-            photo: 'aqui hay una foto'
+            photo: 'https://phantom-marca.unidadeditorial.es/f6789739202270bf269446ecce4bc9d6/resize/828/f/jpg/assets/multimedia/imagenes/2022/10/28/16669745025522.jpg'
         }
 
         dispatch(user_photo(user))
@@ -43,6 +44,7 @@ const Login = () => {
                         <label htmlFor="">Password</label>
                         <input type="text" />
                         <button onClick={handelSingIn} >Continue</button>
+
                     </div>
                 </div>
             </div>

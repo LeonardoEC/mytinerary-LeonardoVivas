@@ -25,9 +25,9 @@ const Cities = () => {
     }, [dispatch])
 
     const inpSearch = useRef()
-    
 
-    const inputSearch = async ()=>{
+
+    const inputSearch = async () => {
 
         // const citie = inpSearch.current.value
         // console.log(citie)
@@ -38,7 +38,7 @@ const Cities = () => {
             }))
             // const response = await axios.get(`http://localhost:8000/api/cities?name=${citie}`)
             // setCities(response.data.cities)
-        } catch(err){
+        } catch (err) {
             // if(err.response.status === 404){
             //     console.log('No se encontro la ciudad')
             //     setCities([])
@@ -58,20 +58,24 @@ const Cities = () => {
                 <div className="searchbar">
                     <img className="searchbar-img" src="Vector.svg" alt="" />
                     <input ref={inpSearch} className="searchbar-inp" type="text" placeholder="Search your city" />
-                    <button onClick={inputSearch}>Enviar</button>
+                    <button className='btnsearch' onClick={inputSearch}>Search</button>
                 </div>
             </div>
             <div className='contCard'>
                 {
                     cities?.length > 0
-                    ? cities?.map((item => {
-                        return (
-                            <LinkRouter className='link' key={item._id} to={`/cities/${item._id}`}>
-                                <Card title={item.name} subtitle={item.country} bgImg={item.img} />
-                            </LinkRouter>
-                        )
-                    }))
-                    : <h1>explota</h1>
+                        ? cities?.map((item => {
+                            return (
+                                <LinkRouter className='link' key={item._id} to={`/cities/${item._id}`}>
+                                    <Card title={item.name} subtitle={item.country} bgImg={item.img} />
+                                </LinkRouter>
+                            )
+                        }))
+                        :
+                        <div className='errorInCities'>
+                            <p>Search error...</p>
+                            <img src="https://i.pinimg.com/originals/a2/19/c7/a219c72580ed6f633ffc7f85756d7efc.gif" alt="" />
+                        </div>
                 }
             </div>
         </main>
