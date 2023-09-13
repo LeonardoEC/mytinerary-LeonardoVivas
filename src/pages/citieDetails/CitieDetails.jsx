@@ -94,7 +94,7 @@ const CitieDetails = () => {
                             )
                         }))
                         : <div className="NoIt">
-                            <h2>Sorry, there are no itineraries for this city yet,<LinkRouter className="linkNotIt" to="/"> sign up </LinkRouter> to get updates on upcoming itineraries for these and many more cities</h2>
+                            <h2>Sorry, there are no itineraries for this city yet,<LinkRouter className="linkNotIt" to="/signUp"> sign up </LinkRouter> to get updates on upcoming itineraries for these and many more cities</h2>
                         </div>
                 }
             </div>
